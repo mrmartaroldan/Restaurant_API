@@ -1,0 +1,46 @@
+{
+  "name": "dish",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_dish": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "details": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "dishHasOrders": {
+      "type": "hasMany",
+      "model": "order",
+      "foreignKey": "",
+      "through": "order_dishes"
+    },
+    "dish_allergens": {
+      "type": "hasMany",
+      "model": "allergens",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

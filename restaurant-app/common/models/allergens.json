@@ -1,0 +1,32 @@
+{
+  "name": "allergens",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_allergens": {
+      "type": "number",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "allergens_dish": {
+      "type": "hasMany",
+      "model": "dish",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

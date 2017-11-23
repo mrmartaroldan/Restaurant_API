@@ -1,0 +1,35 @@
+{
+  "name": "order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_order": {
+      "type": "number",
+      "required": true
+    },
+    "total": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "order-table": {
+      "type": "belongsTo",
+      "model": "table",
+      "foreignKey": "",
+      "options": {}
+    },
+    "orderHasDishes": {
+      "type": "hasMany",
+      "model": "dish",
+      "foreignKey": "",
+      "through": "order_dishes"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

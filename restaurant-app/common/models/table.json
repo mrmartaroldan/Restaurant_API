@@ -1,0 +1,25 @@
+{
+  "name": "table",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id_table": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "table-order": {
+      "type": "hasMany",
+      "model": "order",
+      "foreignKey": "",
+      "options": {}
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
