@@ -6,10 +6,6 @@
     "validateUpsert": true
   },
   "properties": {
-    "id_order": {
-      "type": "number",
-      "required": true
-    },
     "total": {
       "type": "number",
       "required": true

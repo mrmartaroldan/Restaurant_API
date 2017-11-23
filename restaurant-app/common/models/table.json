@@ -5,12 +5,7 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id_table": {
-      "type": "number",
-      "required": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
     "table-order": {
