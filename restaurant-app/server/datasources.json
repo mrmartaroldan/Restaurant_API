@@ -2,5 +2,19 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mongoDB": {
+    "host": "ds123796.mlab.com",
+    "port": 23796,
+    "database": "restaurant",
+    "username": "admin",
+    "password": "Patata851",
+    "name": "mongoDB",
+    "connector": "mongodb",
+    "server": {
+      "auto_reconnect": true,
+      "reconnectTries": 100,
+      "reconnectInterval": 1000
+    }
   }
 }

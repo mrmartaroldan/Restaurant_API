@@ -1,23 +1,26 @@
 {
-  "name": "table",
+  "name": "allergen",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "number": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
       "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "bill": {
-      "type": "hasMany",
-      "model": "bill",
-      "foreignKey": "",
-      "options": {}
+    "dish": {
+      "type": "hasAndBelongsToMany",
+      "model": "dish",
+      "foreignKey": ""
     }
   },
   "acls": [],

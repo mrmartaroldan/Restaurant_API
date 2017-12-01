@@ -6,24 +6,25 @@
     "validateUpsert": true
   },
   "properties": {
-    "total": {
+    "extra": {
+      "type": "string"
+    },
+    "quantity": {
       "type": "number",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "order-table": {
+    "bill": {
       "type": "belongsTo",
-      "model": "table",
-      "foreignKey": "",
-      "options": {}
+      "model": "bill",
+      "foreignKey": "billId"
     },
-    "orderHasDishes": {
-      "type": "hasMany",
+    "dish": {
+      "type": "belongsTo",
       "model": "dish",
-      "foreignKey": "",
-      "through": "order_dishes"
+      "foreignKey": "dishId"
     }
   },
   "acls": [],

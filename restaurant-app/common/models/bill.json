@@ -1,26 +1,29 @@
 {
-  "name": "allergens",
+  "name": "bill",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "image": {
-      "type": "string",
+    "total": {
+      "type": "number",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "allergens_dish": {
+    "table": {
+      "type": "belongsTo",
+      "model": "table",
+      "foreignKey": "",
+      "options": {}
+    },
+    "dish": {
       "type": "hasMany",
       "model": "dish",
-      "foreignKey": ""
+      "foreignKey": "billId",
+      "through": "order"
     }
   },
   "acls": [],

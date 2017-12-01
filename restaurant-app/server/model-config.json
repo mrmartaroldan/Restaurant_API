@@ -14,45 +14,45 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mongoDB"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "mongoDB",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mongoDB",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "mongoDB",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "mongoDB",
     "public": false
   },
   "table": {
-    "dataSource": "db",
+    "dataSource": "mongoDB",
     "public": true
   },
-  "order": {
-    "dataSource": "db",
+  "bill": {
+    "dataSource": "mongoDB",
     "public": true
   },
   "dish": {
-    "dataSource": "db",
+    "dataSource": "mongoDB",
     "public": true
   },
-  "allergens": {
-    "dataSource": "db",
+  "allergen": {
+    "dataSource": "mongoDB",
     "public": true
   },
-  "order_dishes": {
-    "dataSource": "db",
+  "order": {
+    "dataSource": "mongoDB",
     "public": true
   }
 }

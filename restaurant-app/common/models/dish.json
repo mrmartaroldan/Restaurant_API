@@ -6,17 +6,13 @@
     "validateUpsert": true
   },
   "properties": {
-    "id_dish": {
-      "type": "number",
-      "required": true
-    },
     "name": {
       "type": "string",
       "required": true
     },
     "details": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "image": {
       "type": "string",
@@ -29,15 +25,15 @@
   },
   "validations": [],
   "relations": {
-    "dishHasOrders": {
+    "bill": {
       "type": "hasMany",
-      "model": "order",
-      "foreignKey": "",
-      "through": "order_dishes"
+      "model": "bill",
+      "foreignKey": "dishId",
+      "through": "order"
     },
-    "dish_allergens": {
-      "type": "hasMany",
-      "model": "allergens",
+    "allergen": {
+      "type": "hasAndBelongsToMany",
+      "model": "allergen",
       "foreignKey": ""
     }
   },
